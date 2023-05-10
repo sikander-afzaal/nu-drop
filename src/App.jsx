@@ -4,12 +4,14 @@ import Basket from "./pages/basket/Index";
 import Footer from "./layout/Footer";
 import Contact from "./pages/contact/Index";
 import About from "./pages/about/Index";
+import Shipping from "./pages/shop/Shipping";
 
 const App = () => {
   return (
     <>
       <Header />
       <Routes>
+        <Route element={<Shipping />} path="/shipping" />
         <Route element={<About />} path="/about" />
         <Route element={<Contact />} path="/contact" />
         <Route element={<Basket />} path="/basket" />
