@@ -10,6 +10,7 @@ export default {
         primaryPurple: "#b353a0",
         primaryYellow: "#f8af2f",
         lightBlue: "#00abe5",
+        dark: "#282928",
       },
       backgroundImage: {
         mushroom1: "url('/mushroom1.jpg')",

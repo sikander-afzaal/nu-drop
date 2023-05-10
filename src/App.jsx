@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./layout/Header";
 import Basket from "./pages/basket/Index";
+import Footer from "./layout/Footer";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Routes>
         <Route element={<Basket />} path="/basket" />
       </Routes>
+      <Footer />
     </>
   );
 };
