@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Anja";
+  src: url("/fonts/Anja\ Eliane\ accent002.ttf");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/fonts/Arial\ Black.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("/fonts/Arial\ Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Bebas";
+  src: url("/fonts/BebasNeue\ Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Emoji";
+  src: url("/fonts/EmojiOneColor.otf");
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham\ Book\ Font.otf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.ttf");
+  font-weight: 400;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black;
+  }
+}
+@layer utilities {
+  .wrapper {
+    @apply flex justify-start items-center flex-col w-full;
+  }
+  .contain {
+    @apply flex w-[90%] max-w-[1300px];
+  }
+}
