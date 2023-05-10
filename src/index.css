@@ -45,6 +45,15 @@
     @apply flex justify-start items-center flex-col w-full;
   }
   .contain {
-    @apply flex w-[90%] max-w-[1300px];
+    @apply flex w-[90%] max-w-[1400px];
+  }
+  .pink-slide .splide__pagination {
+    @apply gap-3 -bottom-[5%];
+  }
+  .pink-slide .splide__pagination__page {
+    @apply opacity-100 w-4 h-4 bg-white;
+  }
+  .pink-slide .splide__pagination__page.is-active {
+    @apply bg-primaryPink scale-100;
   }
 }
