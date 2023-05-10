@@ -1,9 +1,29 @@
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const [headerBg, setHeaderBg] = useState(false);
+  useEffect(() => {
+    const setBg = () => {
+      if (window.scrollY > 0) {
+        setHeaderBg(true);
+      } else {
+        setHeaderBg(false);
+      }
+    };
+    window.addEventListener("scroll", setBg);
+    return () => {
+      window.removeEventListener("scroll", setBg);
+    };
+  }, []);
+
   return (
-    <header className="wrapper fixed top-0 left-0 z-50">
-      <div className="contain h-[90px] justify-between items-center gap-5">
+    <header
+      className={`wrapper fixed top-0 left-0 z-50 transition-all duration-300 ${
+        headerBg ? "bg-dark" : "bg-transparent"
+      }`}
+    >
+      <div className="contain h-[80px] justify-between items-center gap-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
