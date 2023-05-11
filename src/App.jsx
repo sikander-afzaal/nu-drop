@@ -9,7 +9,7 @@ import Product from "./pages/shop/Product";
 import Shop from "./pages/shop/Index";
 import Home from "./pages/home/Index";
 import AgeModal from "./components/AgeModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const App = () => {
   const { pathname } = useLocation();
