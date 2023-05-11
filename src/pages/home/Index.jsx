@@ -1,6 +1,7 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import ItemCard from "../../components/ItemCard";
+import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
   return (
@@ -36,24 +37,28 @@ const Home = () => {
         </div>
       </div>
       <div className="flex flex-col  justify-center items-center w-full bg-rainbow bg-cover bg-no-repeat py-[200px] sm:py-[300px]">
-        <h2 className="grText uppercase text-center text-[35px] sm:text-[40px] md:text-[70px] font-bold font-a ">
-          Turn on, tune in <br /> & Dropout
-        </h2>
-        <div className="mt-10">
-          <p className="text-white uppercase font-bold font-arial text-base sm:text-lg md:text-2xl">
-            Global No1 Psychedelic brand
-          </p>
-          <button className="text-black uppercase bg-white mt-1 font-bold font-arial h-[60px] w-full rounded-full text-xl sm:text-2xl">
-            Order now
-          </button>
-        </div>
+        <Fade cascade direction="up" triggerOnce>
+          <h2 className="grText uppercase text-center text-[35px] sm:text-[40px] md:text-[70px] font-bold font-a ">
+            Turn on, tune in <br /> & Dropout
+          </h2>
+          <div className="mt-10">
+            <p className="text-white uppercase font-bold font-arial text-base sm:text-lg md:text-2xl">
+              Global No1 Psychedelic brand
+            </p>
+            <button className="text-black uppercase bg-white mt-1 font-bold font-arial h-[60px] w-full rounded-full text-xl sm:text-2xl">
+              Order now
+            </button>
+          </div>
+        </Fade>
       </div>
       <div className="contain my-20 justify-start items-start flex-col gap-5">
-        <h2 className="text-white font-mont font-bold text-xl text-center sm:text-left sm:text-3xl uppercase">
-          What's Popular...
-        </h2>
+        <Fade cascade direction="left" triggerOnce>
+          <h2 className="text-white font-mont font-bold text-xl text-center sm:text-left sm:text-3xl uppercase">
+            What's Popular...
+          </h2>
+        </Fade>
         <Splide
-          className="pb-10"
+          className="pb-10 arrow-mid"
           options={{
             width: "100%",
             arrows: true,
@@ -132,33 +137,38 @@ const Home = () => {
       <div className="wrapper relative py-20 sm:py-32 bg-mission bg-cover bg-no-repeat bg-center isolate">
         <div className="absolute top-0 left-0 w-full h-full bg-black -z-10 bg-opacity-60"></div>
         <div className="contain  justify-start items-center  flex-col gap-8">
-          <h2 className="font-arial uppercase font-bold text-4xl sm:text-5xl text-white">
-            Our mission
-          </h2>
-          <p
-            className={
-              "font-arial text-center font-bold text-base sm:text-lg text-white sm:mb-20"
-            }
-          >
-            NU DROP Co’s mission is to increase and enhance the value of our
-            customer’s lives. To lead our industry in the right direction which
-            will therefore enable us to contribute to our community to
-            facilitate change. This can then bring meaningful value to our
-            communities and, as a result, change the world to become a better
-            open minded place for us all to flourish, grow, and heal.
-          </p>
+          <Fade cascade direction="up" triggerOnce>
+            <h2 className="font-arial uppercase font-bold text-4xl sm:text-5xl text-white">
+              Our mission
+            </h2>
+            <p
+              className={
+                "font-arial text-center font-bold text-base sm:text-lg text-white sm:mb-20"
+              }
+            >
+              NU DROP Co’s mission is to increase and enhance the value of our
+              customer’s lives. To lead our industry in the right direction
+              which will therefore enable us to contribute to our community to
+              facilitate change. This can then bring meaningful value to our
+              communities and, as a result, change the world to become a better
+              open minded place for us all to flourish, grow, and heal.
+            </p>
+          </Fade>
           <div className="bg-white bg-opacity-90 w-full h-[400px] sm:h-[600px] rounded-2xl"></div>
         </div>
       </div>
       <div className="contain xl:flex-row flex-col my-20 sm:my-32 justify-between items-center gap-10">
         <div className="flex justify-start items-center text-center xl:text-left xl:items-start flex-col gap-5">
-          <h2 className="font-mont font-bold text-3xl sm:text-5xl 2xl:text-6xl text-white uppercase">
-            What our clients <br /> <span className="grText">Say about us</span>
-          </h2>
-          <p className="text-base sm:text-lg font-bold font-arial text-white">
-            Don’t take our word for it. Here’s what our clients have to say
-            about us.
-          </p>
+          <Fade direction="left" cascade triggerOnce>
+            <h2 className="font-mont font-bold text-3xl sm:text-5xl 2xl:text-6xl text-white uppercase">
+              What our clients <br />{" "}
+              <span className="grText">Say about us</span>
+            </h2>
+            <p className="text-base sm:text-lg font-bold font-arial text-white">
+              Don’t take our word for it. Here’s what our clients have to say
+              about us.
+            </p>
+          </Fade>
         </div>
         <div className="w-full max-w-[600px]">
           <Splide

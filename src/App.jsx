@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <>
-      {ageModal && <AgeModal setModal={setAgeModal} />}
+      {/* {ageModal && <AgeModal setModal={setAgeModal} />} */}
       <Header />
       <Routes>
         <Route element={<Home />} path="/" />

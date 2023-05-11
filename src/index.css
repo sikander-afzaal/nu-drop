@@ -37,7 +37,7 @@
 
 @layer base {
   body {
-    @apply bg-black;
+    @apply bg-black overflow-x-hidden;
   }
 }
 @layer utilities {
@@ -61,6 +61,9 @@
   }
   .grText {
     @apply text-transparent bg-primaryGr bg-clip-text;
+  }
+  .arrow-mid .splide__arrow {
+    @apply top-[260px];
   }
 }
 .splide__arrow {

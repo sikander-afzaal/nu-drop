@@ -1,3 +1,5 @@
+import { Fade } from "react-awesome-reveal";
+
 const AboutRow = ({ desc, img, order, classes }) => {
   return (
     <div
@@ -12,18 +14,26 @@ const AboutRow = ({ desc, img, order, classes }) => {
             : "items-center xl:items-start text-left"
         }`}
       >
-        {desc.map((elem, idx) => {
-          return (
-            <p
-              key={idx + elem}
-              className="text-white  text-base sm:text-lg font-arial"
-            >
-              {elem}
-            </p>
-          );
-        })}
+        <Fade triggerOnce direction={order ? "right" : "left"} cascade>
+          {desc.map((elem, idx) => {
+            return (
+              <p
+                key={idx + elem}
+                className="text-white  text-base sm:text-lg font-arial"
+              >
+                {elem}
+              </p>
+            );
+          })}
+        </Fade>
       </div>
-      <div className="bg-white bg-opacity-90 w-full xl:max-w-[600px] h-[400px] sm:h-[500px]"></div>
+      <Fade
+        direction={order ? "left" : "right"}
+        triggerOnce
+        className="w-full xl:max-w-[600px]  sm:h-[500px]"
+      >
+        <div className="bg-white bg-opacity-90 w-full h-[400px]"></div>
+      </Fade>
     </div>
   );
 };
