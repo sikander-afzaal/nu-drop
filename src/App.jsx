@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "./layout/Header";
 import Basket from "./pages/basket/Index";
 import Footer from "./layout/Footer";
@@ -12,7 +12,12 @@ import AgeModal from "./components/AgeModal";
 import { useState } from "react";
 
 const App = () => {
+  const { pathname } = useLocation();
   const [ageModal, setAgeModal] = useState(true);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       {ageModal && <AgeModal setModal={setAgeModal} />}
