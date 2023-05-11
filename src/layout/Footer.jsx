@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="wrapper bg-dark py-6">
+    <div className="wrapper mt-auto bg-dark py-6">
       <div className="contain lg:flex-row flex-col justify-between items-center gap-5 lg:gap-2">
         <p className="uppercase text-center text-white text-base xl:text-xl font-bold font-arial">
           Copyright © 2023.all rights reserverd.nudropco
