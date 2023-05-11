@@ -15,6 +15,9 @@ export default {
       backgroundImage: {
         mushroom1: "url('/mushroom1.jpg')",
         mushroom2: "url('/mushroom2.jpg')",
+        rainbow: "url('/bg.png')",
+        home: "url('/home.jpg')",
+        mission: "url('/mission-bg.jpg')",
         primaryGr:
           "linear-gradient(90deg, rgba(140,209,212,1) 0%, rgba(176,131,186,1) 28%, rgba(247,184,165,1) 64%, rgba(194,219,168,1) 100%)",
       },

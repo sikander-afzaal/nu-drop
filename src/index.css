@@ -1,33 +1,33 @@
 @font-face {
   font-family: "Anja";
-  src: url("/fonts/Anja\ Eliane\ accent002.ttf");
+  src: url("/fonts/Anja\ Eliane\ accent002.woff2");
 }
 @font-face {
   font-family: "Arial";
-  src: url("/fonts/Arial\ Black.ttf");
+  src: url("/fonts/Arial\ Black.woff2");
   font-weight: 900;
 }
 @font-face {
   font-family: "Arial";
-  src: url("/fonts/Arial\ Bold.ttf");
+  src: url("/fonts/Arial\ Bold.woff2");
   font-weight: 700;
 }
 @font-face {
   font-family: "Bebas";
-  src: url("/fonts/BebasNeue\ Bold.ttf");
+  src: url("/fonts/BebasNeue\ Bold.woff2");
   font-weight: 700;
 }
 @font-face {
   font-family: "Emoji";
-  src: url("/fonts/EmojiOneColor.otf");
+  src: url("/fonts/EmojiOneColor.woff2");
 }
 @font-face {
   font-family: "Gotham";
-  src: url("/fonts/Gotham\ Book\ Font.otf");
+  src: url("/fonts/Gotham\ Book\ Font.woff2");
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("/fonts/Montserrat-Regular.ttf");
+  src: url("/fonts/Montserrat-Regular.woff2");
   font-weight: 400;
 }
 
@@ -58,6 +58,9 @@
   }
   #root {
     @apply min-h-screen flex justify-start items-center flex-col;
+  }
+  .grText {
+    @apply text-transparent bg-primaryGr bg-clip-text;
   }
 }
 .splide__arrow {

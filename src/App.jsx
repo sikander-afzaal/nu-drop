@@ -7,12 +7,18 @@ import About from "./pages/about/Index";
 import Shipping from "./pages/shop/Shipping";
 import Product from "./pages/shop/Product";
 import Shop from "./pages/shop/Index";
+import Home from "./pages/home/Index";
+import AgeModal from "./components/AgeModal";
+import { useState } from "react";
 
 const App = () => {
+  const [ageModal, setAgeModal] = useState(true);
   return (
     <>
+      {ageModal && <AgeModal setModal={setAgeModal} />}
       <Header />
       <Routes>
+        <Route element={<Home />} path="/" />
         <Route path="/shop">
           <Route element={<Shop />} path="" />
           <Route element={<Shipping />} path="shipping" />

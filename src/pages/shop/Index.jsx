@@ -1,3 +1,5 @@
+import ItemCard from "../../components/ItemCard";
+
 const Shop = () => {
   return (
     <div className="relative isolate wrapper pt-[150px] md:pt-[180px] pb-[120px] bg-mushroom2 bg-cover bg-center bg-no-repeat">
@@ -63,37 +65,37 @@ const Shop = () => {
             </option>
           </select>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-2 sm:mt-8 w-full">
-            <ShopCard
+            <ItemCard
               name="HillBilly"
               desc="FREEZE DRIED FUNGI - 3.5g"
               price="55.00"
               clr="text-primaryBlue"
             />
-            <ShopCard
+            <ItemCard
               name="PE-7"
               desc="AIR DRIED FUNGI - 3.5g"
               price="35.00"
               clr="text-primaryYellow"
             />
-            <ShopCard
+            <ItemCard
               name="GHOST"
               desc="AIR DRIED FUNGI - 3.5g"
               price="45.00"
               clr="text-primaryPurple"
             />
-            <ShopCard
+            <ItemCard
               name="orissa india"
               desc="AIR DRIED FUNGI - 3.5g"
               price="35.00"
               clr="text-primaryGreen"
             />
-            <ShopCard
+            <ItemCard
               name="MICRODOSING CAPSULES"
               desc="MELMAC PE - 200mg"
               price="65.00"
               clr="text-white"
             />
-            <ShopCard
+            <ItemCard
               name="MaCRODOSING CAPSULES"
               desc="AVERY ALBINO - 500mg"
               price="80.00"
@@ -107,24 +109,3 @@ const Shop = () => {
 };
 
 export default Shop;
-
-const ShopCard = ({ img, name, desc, url, clr, price }) => {
-  return (
-    <div className="flex justify-start text-center items-center flex-col gap-8">
-      <div className="bg-white rounded-2xl bg-opacity-90 w-full h-[500px]"></div>
-      <div className="flex justify-start gap-1 items-center flex-col ">
-        <h3
-          className={`${clr} text-xl sm:text-2xl font-bold font-arial leading-[1] uppercase`}
-        >
-          {name}
-        </h3>
-        <p className="text-white text-opacity-60 text-lg sm:text-xl font-bold font-arial leading-[1]">
-          {desc}
-        </p>
-        <p className="text-white mt-1 text-4xl font-bold font-arial leading-[1]">
-          ${price}
-        </p>
-      </div>
-    </div>
-  );
-};
